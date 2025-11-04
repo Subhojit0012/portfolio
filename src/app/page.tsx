@@ -3,7 +3,7 @@ import { AvatarStack } from "@/components/ui/kibo-ui/avatar-stack";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
-import { Mail } from "lucide-react";
+import { Mail, X } from "lucide-react";
 import Link from "next/link";
 import Client3 from "../../public/img/profile/client-3.webp";
 import {
@@ -13,6 +13,7 @@ import {
   MarqueeContent,
 } from "@/components/ui/kibo-ui/marquee";
 import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { ContactForm } from "@/components/ui/contact-form";
 
 export default function Home() {
   const testimonials = [
@@ -163,8 +164,17 @@ export default function Home() {
           pauseOnHover={false}
         />
       </div>
+      {/* section for sending email for Clients */}
+      <section className="w-full py-20 bg-gradient-to-b from-purple-50 to-white">
+        <ContactForm />
+      </section>
 
-      
+      <footer className="w-screen h-20 bg-gray-800 text-white flex items-center justify-center">
+        <h2>Footer section</h2>
+        <p>insta</p>
+        <p>X</p>
+        <p>linked in</p>
+      </footer>
     </div>
   );
 }
